@@ -49,12 +49,12 @@ module.exports = ({ env }) => {
     },
     postgres: {
       connection: {
-        connectionString: env('DATABASE_URL', 'postgresql://roy0jms73865vug-a.singapore-postgres.render.com/royalhotel'),
-        host: env('DATABASE_HOST', 'dpg-cqfpa29u0jms73865vug-a.singapore-postgres.render.com'),
+        connectionString: env('DATABASE_URL'),
+        host: env('DATABASE_HOST'),
         port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'royalhotel'),
-        user: env('DATABASE_USERNAME', 'royalhotel_user'),
-        password: env('DATABASE_PASSWORD', '16AkmDb2RzHUYCX0DXLm3ghfqMvcDaQY'),
+        database: env('DATABASE_NAME'),
+        user: env('DATABASE_USERNAME'),
+        password: env('DATABASE_PASSWORD'),
         ssl: env.bool('DATABASE_SSL', true) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
