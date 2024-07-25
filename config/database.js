@@ -49,7 +49,7 @@ module.exports = ({ env }) => {
     },
     postgres: {
       connection: {
-        connectionString: env('DATABASE_URL'),
+        connectionString: env('DATABASE_URL', 'postgresql://roy0jms73865vug-a.singapore-postgres.render.com/royalhotel'),
         host: env('DATABASE_HOST', 'dpg-cqfpa29u0jms73865vug-a.singapore-postgres.render.com'),
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'royalhotel'),
